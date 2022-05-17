@@ -53,9 +53,11 @@ export async function deactivate() {
 export async function startClient(context: vscode.ExtensionContext) {
 
 	let serverOptions: ServerOptions = {
-		run: { command: "dlsp", args: ["run", "-p", "stdio"] },
+		run: { command: "dlsp" }, // debug for small repro
+		// run: { command: "dlsp", args: ["run", "-p", "stdio"] },
 		// debug: { command: "dlsp", args: ["run", "stdio", "--log-format", "/tmp/zk-lsp.log"] }
-		debug: { command: "dlsp", args: ["run", "-p", "stdio", "--log-format", "plain"] }
+		// debug: { command: "dlsp", args: ["run", "-p", "stdio", "--log-format", "plain"] } // not working yet
+		debug: { command: "dlsp" } // not working yet
 	};
 
 	// Corresponding docs: https://code.visualstudio.com/api/references/document-selector
@@ -78,7 +80,7 @@ export async function startClient(context: vscode.ExtensionContext) {
 	};
 
 	// Create the language client and start the client.
-	client = new LanguageClient(clientId, `Language Server for ${clientId}`, serverOptions, clientOptions);
+	client = new LanguageClient(clientId, `${clientId} language server`, serverOptions, clientOptions);
 
 	// Follows 8.0.0 breaking changes convention
 	// https://github.com/microsoft/vscode-languageserver-node/blob/f97bb73dbfb920af4bc8c13ecdcdc16359cdeda6/client-node-tests/src/integration.test.ts

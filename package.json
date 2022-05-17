@@ -52,7 +52,7 @@
 					"messages",
 					"verbose"
 				],
-				"default": "messages",
+				"default": "verbose",
 				"description": "Level of verbosity in dlsp's log output.",
 				"scope": "window"
 			}
