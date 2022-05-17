@@ -1,0 +1,85 @@
+{
+	"name": "dlsp",
+	"displayName": "dlsp",
+	"description": "dlsp",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.67.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:dlsp.start",
+		"onLanguage:cue"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"languages": [
+			{
+				"id": "cue",
+				"aliases": [
+					"CUE",
+					"cue"
+				],
+				"extensions": [
+					".cue"
+				]
+			}
+		],
+		"commands": [
+			{
+				"command": "dlsp.start",
+				"title": "DLSP: Start"
+			},
+			{
+				"command": "dlsp.restart",
+				"title": "DLSP: Restart"
+			},
+			{
+				"command": "dlsp.showLogs",
+				"title": "DLSP: Show Logs"
+			}
+		]
+	},
+	"configuration": {
+		"title": "Trace level",
+		"properties": {
+			"dlsp.trace.server": {
+				"type": "string",
+				"enum": [
+					"off",
+					"messages",
+					"verbose"
+				],
+				"default": "messages",
+				"description": "Level of verbosity in dlsp's log output.",
+				"scope": "window"
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.2.2",
+		"@types/node": "14.x",
+		"@types/vscode": "^1.67.0",
+		"@typescript-eslint/eslint-plugin": "^4.26.0",
+		"@typescript-eslint/parser": "^4.26.0",
+		"eslint": "^7.27.0",
+		"glob": "^7.1.7",
+		"mocha": "^10.0.0",
+		"typescript": "^4.3.2",
+		"@vscode/test-electron": "^1.5.2"
+	},
+	"dependencies": {
+		"vscode-languageclient": "^8.0.0"
+	}
+}
