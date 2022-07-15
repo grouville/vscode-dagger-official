@@ -1,0 +1,24 @@
+{
+	"name": "Dagger Theme",
+	"semanticHighlighting": true,
+	"semanticTokenColors": {
+		"include": "#154666",
+		"variable": "#298073",
+		"operator": "#184C78",
+		"function": "#438F68",
+		"keyword": "#5A9C56",
+		"repeat": "#2C3532",
+		"conditional": "#0F6466",
+		"comment": "#D8B08C",
+		"string": "#FFCB9A",
+		"number": "#D2E8E3",
+		"boolean": "#005E54",
+		"constant": "#003547",
+		"punctuation": "#C2BB00",
+		"none": "#E1523D",
+		"field": "#ED8B16",
+		"definition": "#3D5A73",
+		"label": "#2F3D40",
+		"attribute": "#455559"
+	}
+}

@@ -5,7 +5,6 @@ import * as vscode from "vscode";
 import {
   LanguageClient,
   LanguageClientOptions,
-  SettingMonitor,
   ServerOptions,
 } from "vscode-languageclient/node";
 
@@ -61,30 +60,17 @@ export async function deactivate() {
 
 export async function startClient(context: vscode.ExtensionContext) {
   let serverOptions: ServerOptions = {
-    run: { command: "dlsp" }, // debug for small repro
-    // run: { command: "dlsp", args: ["run", "-p", "stdio"] },
-    // debug: { command: "dlsp", args: ["run", "stdio", "--log-format", "/tmp/zk-lsp.log"] }
-    // debug: { command: "dlsp", args: ["run", "-p", "stdio", "--log-format", "plain"] } // not working yet
-    debug: { command: "dlsp" }, // not working yet
+    run: { command: "daggerlsp" }, // debug for small repro
+    debug: { command: "daggerlsp" }, // not working yet
   };
 
   // Corresponding docs: https://code.visualstudio.com/api/references/document-selector
   let clientOptions: LanguageClientOptions = {
-    // alternatives !!
-    // documentSelector: [{ pattern: '**/*.cue' }],
-    // Cue files saved on disk
-    // documentSelector: [{ scheme: 'file', language: 'cue' }],
-
     // Register the server for cue documents
-    // documentSelector: ['cue'],
     documentSelector: [
       { scheme: "file", language: "cue" },
       { scheme: "untitled", language: "cue" },
     ],
-    // synchronize: {
-    // 	// Synchronize the setting section 'logLevel' to the server
-    // 	configurationSection: 'logLevel',
-    // },
   };
 
   // Create the language client and start the client.
