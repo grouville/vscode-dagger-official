@@ -8,7 +8,7 @@ import {
   ServerOptions,
 } from "vscode-languageclient/node";
 
-const clientId = "dlsp";
+const clientId = "daggerlsp";
 const outputChannel = vscode.window.createOutputChannel("logs", "cue"); // output channel for debug
 let client: LanguageClient;
 
