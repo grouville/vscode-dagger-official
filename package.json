@@ -1,10 +1,11 @@
 {
 	"name": "daggercuelsp",
-	"displayName": "dagger cue lsp",
+	"displayName": "Dagger cue lsp",
 	"description": "A VSCode extension to use dagger cue lsp",
 	"icon": "dagger-icon.png",
 	"publisher": "Dagger",
 	"repository": {
+		"type": "github",
 		"url": "https://github.com/dagger/vscode-dagger"
 	},
 	"version": "0.3.0",
@@ -47,11 +48,11 @@
 				"title": "DAGGERLSP: Start"
 			},
 			{
-				"command": "dlsp.restart",
+				"command": "daggerlsp.restart",
 				"title": "DAGGERLSP: Restart"
 			},
 			{
-				"command": "dlsp.showLogs",
+				"command": "daggerlsp.showLogs",
 				"title": "DAGGERLSP: Show Logs"
 			}
 		]
@@ -66,8 +67,8 @@
 					"messages",
 					"verbose"
 				],
-				"default": "verbose",
-				"description": "Level of verbosity in dlsp's log output.",
+				"default": "off",
+				"description": "Level of verbosity in dagger lsp's log output.",
 				"scope": "window"
 			}
 		}
