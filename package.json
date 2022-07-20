@@ -3,6 +3,7 @@
 	"displayName": "dagger cue lsp",
 	"description": "A VSCode extension to use dagger cue lsp",
 	"icon": "dagger-icon.png",
+	"publisher": "Dagger",
 	"repository": {
 		"url": "https://github.com/dagger/vscode-dagger"
 	},
