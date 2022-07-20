@@ -8,7 +8,7 @@
 		"type": "github",
 		"url": "https://github.com/dagger/vscode-dagger"
 	},
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"engines": {
 		"vscode": "^1.67.0"
 	},

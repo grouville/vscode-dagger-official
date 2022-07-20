@@ -1,10 +1,26 @@
+# Vscode
 .vscode/**
 .vscode-test/**
-src/**
+
+# Git
 .gitignore
+
+# Package manager
 .yarnrc
-vsc-extension-quickstart.md
+
+# Docs
+docs/**
+
+# Typescript
+src/**
 **/tsconfig.json
 **/.eslintrc.json
 **/*.map
 **/*.ts
+
+# Test
+**/test
+**/*.test
+
+# Already compiled
+**/*.vsix
