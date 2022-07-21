@@ -22,13 +22,6 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"themes": [
-			{
-				"uiTheme": "vs-dark",
-				"label": "Dagger Theme",
-				"path": "./themes/dagger/theme.json"
-			}
-		],
 		"languages": [
 			{
 				"id": "cue",
@@ -40,6 +33,13 @@
 					".cue"
 				],
 				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "cue",
+				"scopeName": "source.cue",
+				"path": "./syntaxes/cue.tmLanguage.json"
 			}
 		],
 		"commands": [
@@ -93,11 +93,6 @@
 		"mocha": "^10.0.0",
 		"typescript": "^4.3.2",
 		"@vscode/test-electron": "^1.5.2"
-	},
-	"configurationDefaults": {
-		"cue": {
-			"editor.semanticHighlighting.enabled": true
-		}
 	},
 	"dependencies": {
 		"vscode-languageclient": "^8.0.0"
